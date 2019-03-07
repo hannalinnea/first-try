@@ -18,7 +18,6 @@
     <div>
       <img src="https://www.opi.com/sites/default/files/styles/paragraph_full_width_image/public/reds-top-marquee-2.jpg?itok=gWI2je1m" alt="Polish" width="600" height="220">
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $(function() {
@@ -29,7 +28,21 @@
         }
 
         $('.addOption').click(add_option)
+
+        var options = []
+        var submit = function() {
+          $('.inputSection').hide()
+          $('.resultSection').css('display', 'flex')
+          $('input').each(function() {
+            options.push($(this).val())
+          })
+          var winner = options [Math.floor(Math.random() * options.length)]
+          console.log(winner)
+          $('.resultSection').text(winner)
+        }
+        $('.goOption').click(submit)
       })
+
     </script>
   </body>
 </html>

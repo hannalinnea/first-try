@@ -46,8 +46,18 @@ input {
   padding: 12px 28px;
   font-size: 12px;
   margin-bottom: 20px;
+  margin-top: 50px
 }
 
 img {
   border: 2px solid black;
+}
+
+.resultSection {
+  height: 200px
+  display: flex;
+  font-family: monospace;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px
 }
